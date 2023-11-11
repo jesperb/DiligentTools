@@ -132,7 +132,8 @@ int WINAPI WinMain(_In_ HINSTANCE     hInstance,
     double filteredFrameTime = 0.0;
 
     // Main message loop
-    MSG msg = {0};
+    MSG msg;
+    memset(&msg, 0, sizeof(msg));
     while (WM_QUIT != msg.message)
     {
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
