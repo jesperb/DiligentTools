@@ -118,7 +118,7 @@ if(PLATFORM_UNIVERSAL_WINDOWS)
     target_compile_definitions(Diligent-Imgui PRIVATE IMGUI_DISABLE_WIN32_FUNCTIONS)
 endif()
 
-if(PLATFORM_WIN32 AND MINGW_BUILD)
+if(PLATFORM_WIN32 AND MINGW)
     # Link with dwmapi.lib as imgui_impl_win32.cpp skips
     # '#pragma comment(lib, "dwmapi")'
     # when compiler is not MSVC
